@@ -15,13 +15,13 @@ function rock(computer) {
     switch (computer) {
         case "rock":
             console.log("DRAW");
-            break;
+            return 1;
         case "paper":
             console.log("LOSE");
-            break;
+            return 2;
         case "scissors":
             console.log("WIN");
-            break;
+            return 0;
     }
 }
 
@@ -29,13 +29,13 @@ function paper(computer) {
     switch (computer) {
         case "rock":
             console.log("WIN");
-            break;
+            return 0;
         case "paper":
             console.log("DRAW");
-            break;
+            return 1;
         case "scissors":
             console.log("LOSE");
-            break;
+            return 2;
     }
 }
 
@@ -43,65 +43,52 @@ function scissors(computer) {
     switch (computer) {
         case "rock":
             console.log("LOSE");
-            break;
+            return 2;
         case "paper":
             console.log("WIN");
-            break;
+            return 0;
         case "scissors":
             console.log("DRAW");
-            break;
+            return 1;
     }
 }
 
 function outcome(player, computer) {
-    /*
-        rock = rock
-        rock < paper
-        rock > scissors
-
-        paper = paper
-        paper < scissors
-        paper > rock
-
-        scissors = scissors
-        scissors < rock
-        scissors > paper
-        
-    */
-    let victory = false;
     console.log("Player: ", player, "Computer: ", computer);
 
     switch (player) {
         case "rock":
-            victory = rock(computer);
-            break;
+            return rock(computer);
 
         case "paper":
-            victory = paper(computer);
-            break;
+            return paper(computer);
         
         case "scissors":
-            victory = scissors(computer);
-            break;
-    }
-    let player_score = 0;
-    let computer_score = 0;
+            return scissors(computer);
 
-    switch (victory) {
-        case true:
-            player_score += 1;
-        case false:
-            computer_score += 1;
     }
-    
 }
 
 function the_game(){
+    let player_score = 0;
+    let computer_score = 0;
+
     for (let i = 0; i < 5; i++) {
         let computer = computer_choice();
         let player = player_choice();
-        outcome(player,computer)
+        let result = outcome(player,computer);
+        switch (result) {
+            case 0:
+                player_score += 1;
+                break;
+            case 1:
+                break;
+            case 2:
+                computer_score += 1;
+        }
+        console.log(player_score, " : ", computer_score);
     }
+    console.log("Final Score(", player_score, " : ", computer_score,")");
 }
 
 the_game();
