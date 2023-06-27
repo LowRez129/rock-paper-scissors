@@ -68,7 +68,7 @@ function outcome(player, computer) {
         scissors > paper
         
     */
-    console.log(player, computer);
+    console.log("Player: ", player, "Computer: ", computer);
     switch (player) {
         case "rock":
             rock(computer);
