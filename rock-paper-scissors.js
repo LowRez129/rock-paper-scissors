@@ -73,15 +73,15 @@ function outcome(player, computer) {
 
     switch (player) {
         case "rock":
-            rock(computer);
+            victory = rock(computer);
             break;
 
         case "paper":
-            paper(computer);
+            victory = paper(computer);
             break;
         
         case "scissors":
-            scissors(computer);
+            victory = scissors(computer);
             break;
     }
     let player_score = 0;
