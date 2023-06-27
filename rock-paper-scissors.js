@@ -8,7 +8,7 @@ function player_choice() {
     let choice;
     do {
         choice = prompt();
-    } while (choice == "");
+    } while (choice != "");
 
     choice = choice.toLowerCase();
     return choice;
