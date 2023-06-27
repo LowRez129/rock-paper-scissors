@@ -68,7 +68,9 @@ function outcome(player, computer) {
         scissors > paper
         
     */
+    let victory = false;
     console.log("Player: ", player, "Computer: ", computer);
+
     switch (player) {
         case "rock":
             rock(computer);
@@ -81,6 +83,15 @@ function outcome(player, computer) {
         case "scissors":
             scissors(computer);
             break;
+    }
+    let player_score = 0;
+    let computer_score = 0;
+
+    switch (victory) {
+        case true:
+            player_score += 1;
+        case false:
+            computer_score += 1;
     }
     
 }
