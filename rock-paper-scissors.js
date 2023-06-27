@@ -5,7 +5,10 @@ function computer_choice() {
 }
 
 function player_choice() {
-    let choice = prompt();
+    let choice;
+    do {
+        choice = prompt();
+    } while (choice == "");
 
     choice = choice.toLowerCase();
     return choice;
