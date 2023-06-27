@@ -89,6 +89,18 @@ function the_game(){
         console.log(player_score, " : ", computer_score);
     }
     console.log("Final Score(", player_score, " : ", computer_score,")");
+    
+    switch (true) {
+        case (player_score > computer_score):
+            console.log("YOU WIN");
+            break;
+        case computer_score:
+            console.log("DRAW");
+            break;
+        case (player_score < computer_score):
+            console.log("YOU LOSE");
+            break;
+    }
 }
 
 the_game();
