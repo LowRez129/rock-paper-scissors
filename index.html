@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="rock-paper-scissors.js"></script>
+    <!--
+    <script src="rock-paper-scissors.js" defer></script>
+    -->
+    
 </head>
 <body>
-    <div>
-        <button>Rock</button>
-        <button>Paper</button>
-        <button>Scissors</button>
+    <div id="buttons">
+        <button class="rock">Rock</button>
+        <button class="paper">Paper</button>
+        <button class="scissors">Scissors</button>
     </div>
-    <div>
-        Score:
-    </div>
+    <div id="score"></div>
+
+    <script>
+        function what() {
+            console.log(this.class);
+        }
+        let test = document.querySelectorAll("button");
+        test = test.forEach(button => button.addEventListener("click", what));
+        //console.log(test);
+    </script>
+    
 </body>
 </html>
