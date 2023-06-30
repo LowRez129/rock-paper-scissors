@@ -11,15 +11,15 @@
 </head>
 <body>
     <div id="buttons">
-        <button class="rock">Rock</button>
-        <button class="paper">Paper</button>
-        <button class="scissors">Scissors</button>
+        <button class="rock" value="rock">Rock</button>
+        <button class="paper" value="paper">Paper</button>
+        <button class="scissors" value="scissors">Scissors</button>
     </div>
     <div id="score"></div>
 
     <script>
         function what() {
-            console.log(this.class);
+            console.log(this.value);
         }
         let test = document.querySelectorAll("button");
         test = test.forEach(button => button.addEventListener("click", what));
