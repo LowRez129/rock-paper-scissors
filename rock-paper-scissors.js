@@ -63,36 +63,19 @@ function outcome(player, computer) {
 }
 
 function the_game(){
-    let player_score = 0;
-    let computer_score = 0;
+    let computer = computer_choice();
+    let player = this.value;
+    let result = outcome(player,computer);
+    switch (result) {
+        case 0:
+            console.log("YOU WIN")
+            break;
+        case 1:
+            console.log("DRAW")
+            break;
+        case 2:
+            console.log("YOU LOSE")
 
-    for (let i = 0; i < 5; i++) {
-        let computer = computer_choice();
-        let player = this.value;
-        let result = outcome(player,computer);
-        switch (result) {
-            case 0:
-                player_score += 1;
-                break;
-            case 1:
-                break;
-            case 2:
-                computer_score += 1;
-        }
-        console.log(player_score, " : ", computer_score);
-    }
-    console.log("Final Score(", player_score, " : ", computer_score,")");
-    
-    switch (true) {
-        case (player_score > computer_score):
-            console.log("YOU WIN");
-            break;
-        case computer_score:
-            console.log("DRAW");
-            break;
-        case (player_score < computer_score):
-            console.log("YOU LOSE");
-            break;
     }
 }
 
