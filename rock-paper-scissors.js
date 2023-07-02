@@ -61,31 +61,28 @@ function outcome(player, computer) {
 
     }
 }
-
+ 
 function the_game(){
     let computer = computer_choice();
     let player = this.value;
     let result = outcome(player,computer);
     switch (result) {
         case 0:
-            console.log("YOU WIN")
-            break;
+            player_score += 1;
         case 1:
-            console.log("DRAW")
             break;
         case 2:
-            console.log("YOU LOSE")
-
+            computer_score += 1;
     }
+    console.log(player_score, " : ", computer_score);
 }
 
+var player_score = 0;
+var computer_score = 0;
+
 function huh(){
-    function what() {
-        console.log(this.value);
-    }
     let test = document.querySelectorAll("button");
     test = test.forEach(button => button.addEventListener("click", the_game));
 }
 
 huh();
-//the_game();
