@@ -53,9 +53,9 @@ function the_game(){
 var player_score = 0;
 var computer_score = 0;
 
-function huh(){
+function button(){
     let test = document.querySelectorAll("button");
     test = test.forEach(button => button.addEventListener("click", the_game));
 }
 
-huh();
+button();
