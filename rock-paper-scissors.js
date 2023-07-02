@@ -4,16 +4,6 @@ function computer_choice() {
     return choice[random];
 }
 
-function player_choice() {
-    let choice;
-    do {
-        choice = prompt();
-    } while (choice == "");
-
-    choice = choice.toLowerCase();
-    return choice;
-}
-
 function rock(computer) {
     switch (computer) {
         case "rock":
@@ -78,7 +68,7 @@ function the_game(){
 
     for (let i = 0; i < 5; i++) {
         let computer = computer_choice();
-        let player = player_choice();
+        let player = this.value;
         let result = outcome(player,computer);
         switch (result) {
             case 0:
@@ -106,4 +96,13 @@ function the_game(){
     }
 }
 
-the_game();
+function huh(){
+    function what() {
+        console.log(this.value);
+    }
+    let test = document.querySelectorAll("button");
+    test = test.forEach(button => button.addEventListener("click", the_game));
+}
+
+huh();
+//the_game();
