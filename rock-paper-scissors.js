@@ -34,6 +34,10 @@ function outcome(player, computer) {
 }
  
 function the_game(){
+    if (player_score == 5 || computer_score == 5){
+        return;
+    }
+
     let computer = computer_choice();
     let player = this.value;
     let result = outcome(player,computer);
