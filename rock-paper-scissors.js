@@ -43,7 +43,7 @@ function the_game(){
         case "win":
             player_score += 1;
         case "draw":
-            break;
+            break
         case "lose":
             computer_score += 1;
     }
@@ -53,9 +53,9 @@ function the_game(){
 var player_score = 0;
 var computer_score = 0;
 
-function button(){
+function huh(){
     let test = document.querySelectorAll("button");
     test = test.forEach(button => button.addEventListener("click", the_game));
 }
 
-button();
+huh();
