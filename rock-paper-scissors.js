@@ -4,62 +4,35 @@ function computer_choice() {
     return choice[random];
 }
 
-function rock(computer) {
-    switch (computer) {
-        case "rock":
-            console.log("DRAW");
-            return 1;
-        case "paper":
-            console.log("LOSE");
-            return 2;
-        case "scissors":
-            console.log("WIN");
-            return 0;
-    }
-}
-
-function paper(computer) {
-    switch (computer) {
-        case "rock":
-            console.log("WIN");
-            return 0;
-        case "paper":
-            console.log("DRAW");
-            return 1;
-        case "scissors":
-            console.log("LOSE");
-            return 2;
-    }
-}
-
-function scissors(computer) {
-    switch (computer) {
-        case "rock":
-            console.log("LOSE");
-            return 2;
-        case "paper":
-            console.log("WIN");
-            return 0;
-        case "scissors":
-            console.log("DRAW");
-            return 1;
-    }
-}
-
 function outcome(player, computer) {
     console.log("Player: ", player, "Computer: ", computer);
 
-    switch (player) {
+    switch (computer) {
+        case player:
+            return "draw";
         case "rock":
-            return rock(computer);
-
+            switch (player) {
+                case "paper":
+                    return "win";
+                case "scissors":
+                    return "lose";
+            }
         case "paper":
-            return paper(computer);
-        
+            switch (player) {
+                case "rock":
+                    return "lose";
+                case "scissors":
+                    return "win";
+            }
         case "scissors":
-            return scissors(computer);
-
+            switch (player) {
+                case "rock":
+                    return "win";
+                case "paper":
+                    return "lose";
+            }
     }
+    
 }
  
 function the_game(){
@@ -67,11 +40,11 @@ function the_game(){
     let player = this.value;
     let result = outcome(player,computer);
     switch (result) {
-        case 0:
+        case "win":
             player_score += 1;
-        case 1:
+        case "draw":
             break;
-        case 2:
+        case "lose":
             computer_score += 1;
     }
     console.log(player_score, " : ", computer_score);
