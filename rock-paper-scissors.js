@@ -5,8 +5,6 @@ function computer_choice() {
 }
 
 function outcome(player, computer) {
-    console.log("Player: ", player, "Computer: ", computer);
-
     switch (computer) {
         case player:
             return "draw";
@@ -39,6 +37,7 @@ function the_game(){
     let computer = computer_choice();
     let player = this.value;
     let result = outcome(player,computer);
+
     switch (result) {
         case "win":
             player_score += 1;
@@ -47,15 +46,17 @@ function the_game(){
         case "lose":
             computer_score += 1;
     }
-    console.log(player_score, " : ", computer_score);
+    score.textContent = `Player(${player}): ${player_score} Computer(${computer}): ${computer_score}`;
 }
 
 var player_score = 0;
 var computer_score = 0;
+var score = document.querySelector("#score");
+score.textContent = `Player: ${player_score} Computer: ${computer_score}`;
 
-function huh(){
-    let test = document.querySelectorAll("button");
-    test = test.forEach(button => button.addEventListener("click", the_game));
+function buttonPress(){
+    let button_query = document.querySelectorAll("button");
+    button_query = button_query.forEach(button => button.addEventListener("click", the_game));
 }
 
-huh();
+buttonPress();
