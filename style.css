@@ -12,7 +12,7 @@ body{
     padding: 16px;
 }
 
-#buttons{
+.buttons{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,9 +24,8 @@ body{
 #score {
     display: flex;
     justify-content: space-evenly;
-    gap: 16px;
     background-color: hotpink;
-    height: 300px;
+    flex-grow: 1;
 }
 
 .player,
@@ -40,4 +39,5 @@ body{
     align-items: center;
     justify-content: space-evenly;
     padding: 16px;
+    background-color: yellow;
 }
