@@ -12,15 +12,6 @@ body{
     padding: 16px;
 }
 
-.buttons{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 16px;
-    background-color: black;
-    padding: 16px;
-}
-
 #score {
     display: flex;
     justify-content: space-evenly;
@@ -32,6 +23,15 @@ body{
 .computer {
     display: flex;
     align-items: center;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    background-color: black;
+    padding: 16px;
 }
 
 #footer {
