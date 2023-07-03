@@ -50,13 +50,16 @@ function the_game(){
         case "lose":
             computer_score += 1;
     }
-    score.textContent = `Player(${player}): ${player_score} Computer(${computer}): ${computer_score}`;
+    score1.textContent = `Player(${player}): ${player_score}`;
+    score2.textContent = `Computer(${computer}): ${computer_score}`;
 }
 
 var player_score = 0;
 var computer_score = 0;
-var score = document.querySelector("#score");
-score.textContent = `Player: ${player_score} Computer: ${computer_score}`;
+var score1 = document.querySelector("#score .player");
+var score2 = document.querySelector("#score .computer");
+
+//score.textContent = `Player: ${player_score} Computer: ${computer_score}`;
 
 function buttonPress(){
     let button_query = document.querySelectorAll("button");
