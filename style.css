@@ -5,19 +5,39 @@ body{
     margin: 0;
 }
 
-#buttons{
+#header {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    padding: 16px;
+}
+
+#buttons{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    gap: 16px;
     background-color: black;
     padding: 16px;
 }
 
 #score {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 16px;
     background-color: hotpink;
+    height: 300px;
+}
+
+.player,
+.computer {
+    display: flex;
+    align-items: center;
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     padding: 16px;
 }
