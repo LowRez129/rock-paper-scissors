@@ -52,16 +52,18 @@ function the_game(){
     }
     score1.textContent = `${player_score}`;
     score2.textContent = `${computer_score}`;
-    footer1.textContent = `${player}`;
-    footer2.textContent = `${computer}`;
+    choice1.textContent = `${player}`;
+    choice2.textContent = `${computer}`;
+    footer.textContent = `${result}`;
 }
 
 var player_score = 0;
 var computer_score = 0;
 var score1 = document.querySelector("#score .player");
 var score2 = document.querySelector("#score .computer");
-var footer1 = document.querySelector("#footer .player-choice");
-var footer2 = document.querySelector("#footer .computer-choice");
+var choice1 = document.querySelector("#choice .player-choice");
+var choice2 = document.querySelector("#choice .computer-choice");
+var footer = document.querySelector("#footer");
 
 function buttonPress(){
     let button_query = document.querySelectorAll("#score button");
