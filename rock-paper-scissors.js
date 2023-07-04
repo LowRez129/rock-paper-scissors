@@ -33,9 +33,9 @@ function outcome(player, computer) {
     
 }
  
-function the_game(){
+function the_game(){    
     if (player_score == 5 || computer_score == 5){
-        return;
+      return;   
     }
 
     let computer = computer_choice();
@@ -55,6 +55,13 @@ function the_game(){
     choice1.textContent = `${player}`;
     choice2.textContent = `${computer}`;
     footer.textContent = `${result}`;
+
+    if (player_score == 5) {
+        return footer.textContent = "YOU WON";
+    }
+    else if (computer_score == 5) {
+        return footer.textContent = "YOU LOSE";
+    }
 }
 
 var player_score = 0;

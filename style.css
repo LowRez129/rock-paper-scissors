@@ -1,3 +1,7 @@
+:root {
+    --font-size: 100px;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -9,7 +13,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 16px;
+    padding: 8px;
+    font-size: 25px;
 }
 
 #score {
@@ -23,7 +28,7 @@ body{
 .computer {
     display: flex;
     align-items: center;
-    font-size: 100px;
+    font-size: var(--font-size);
 }
 
 .buttons{
@@ -33,6 +38,11 @@ body{
     gap: 16px;
     background-color: black;
     padding: 16px;
+}
+
+.buttons button {
+    background-color: brown;
+    padding: 16px 100px;
 }
 
 #choice {
@@ -45,12 +55,13 @@ body{
 
 .player-choice,
 .computer-choice {
-    font-size: 100px;
+    font-size: var(--font-size);
 }
 
 #footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 100px;
+    background-color: aqua;
+    font-size: var(--font-size);
 }
