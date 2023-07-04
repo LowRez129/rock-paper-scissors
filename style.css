@@ -21,7 +21,6 @@ body{
     display: flex;
     justify-content: space-evenly;
     background-color: hotpink;
-    flex-grow: 1;
 }
 
 .player,
